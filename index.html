@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jessa Marie Dragon| Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Jessa Marie Dragon | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f4f7fa;
+      --text: #333;
+      --primary: #092b4d;
+      --card: #fff;
+      --link: #0066cc;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #f4f4f4;
+      --primary: #1e90ff;
+      --card: #1e1e1e;
+      --link: #4da3ff;
+    }
+
     * {
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f4f7fa;
       margin: 0;
       padding: 0;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     header {
-      background-color: #092b4d;
+      background-color: var(--primary);
       color: white;
       padding: 2rem 1rem;
       text-align: center;
@@ -30,26 +46,37 @@
       font-size: 2rem;
     }
 
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      font-weight: 300;
+    .toggle-container {
+      text-align: right;
+      padding: 0.5rem 1rem;
+    }
+
+    .toggle-container button {
+      background: none;
+      border: 1px solid var(--text);
+      padding: 0.3rem 0.6rem;
+      color: var(--text);
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem 1rem;
     }
 
     .section {
       margin-bottom: 2rem;
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 10px;
     }
 
     .section h2 {
-      color: #092b4d;
+      color: var(--primary);
       font-size: 1.5rem;
-      border-bottom: 2px solid #e0e0e0;
+      border-bottom: 2px solid #ccc;
       padding-bottom: 0.3rem;
       margin-bottom: 1rem;
     }
@@ -58,33 +85,41 @@
       padding-left: 1.2rem;
     }
 
-    li {
-      margin-bottom: 0.5rem;
-    }
-
     a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      color: var(--link);
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background: #092b4d;
+      padding: 1rem;
+      background: var(--primary);
       color: white;
       font-size: 0.9rem;
     }
 
-    /* Responsive layout */
+    .btn-download {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.5rem;
       }
-
       .section h2 {
         font-size: 1.25rem;
       }
@@ -92,66 +127,67 @@
   </style>
 </head>
 <body>
+
+  <div class="toggle-container">
+    <button onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+  </div>
+
   <header>
     <h1>Jessa Marie Dragon</h1>
-    <p>IT Associate | System Specialist |Junior Programmer</p>
+    <p>IT Associate | System Specialist | Junior Programmer</p>
   </header>
 
   <div class="container">
+
     <div class="section">
       <h2>🎓 Education</h2>
-      <p><strong>Bachelor of Technical Vocational Teacher Education (BTVTE)</strong>, Major in Computer Programming<br/>
-      President Ramon Magsaysay State University (2019 – 2023)<br/>
-      <em>Honor: Cum Laude</em></p>
+      <p><strong>BTVTE – Computer Programming</strong><br/>
+      President Ramon Magsaysay State University (2019–2023)<br/>
+      <em>Cum Laude</em></p>
     </div>
 
     <div class="section">
-      <h2>💼 Professional Experience</h2>
-
-      <p><strong>System Specialist</strong><br/>
-      Balibago Waterworks System Inc. | July 2024 – Present</p>
+      <h2>💼 Experience</h2>
+      <p><strong>System Specialist</strong> – Balibago Waterworks (2024–Present)</p>
       <ul>
-        <li>Enhanced and maintained POS system (Elite System) for accurate billing/payment.</li>
-        <li>Provided IT support to 100+ branches across the country.</li>
-        <li>Managed Google Workspace and ensured secure communication.</li>
-        <li>Implemented cybersecurity measures and server integrity protocols.</li>
-        <li>Led user training and created technical documentation.</li>
+        <li>Managed Elite POS system & Google Workspace.</li>
+        <li>Provided IT support to 100+ branches.</li>
       </ul>
-
-      <p><strong>Senior Technician</strong><br/>
-      Browave Philippines Corporation | Sept 2023 – Apr 2024</p>
+      <p><strong>Senior Technician</strong> – Browave Philippines (2023–2024)</p>
       <ul>
-        <li>Developed CIM systems for efficient manufacturing workflows.</li>
-        <li>Resolved complex hardware/software/network issues.</li>
-        <li>Handled upgrades, backups, and security tasks.</li>
-        <li>Improved overall system performance and support processes.</li>
+        <li>Developed CIM systems and optimized operations.</li>
+        <li>Handled system security, backups, and upgrades.</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>🛠️ Technical Skills</h2>
       <ul>
-        <li><strong>System Administration:</strong> Windows Server, Google Workspace</li>
-        <li><strong>Networking:</strong> LAN/WAN, TCP/IP, Security</li>
-        <li><strong>Programming:</strong> PHP, Laravel, MySQL, Web Development</li>
-        <li><strong>Support:</strong> Diagnostics, Remote Tools</li>
-        <li><strong>Cybersecurity:</strong> Backup Protocols, Integrity Monitoring</li>
-        <li><strong>Documentation:</strong> Reports, User Training</li>
+        <li>System Admin: Windows Server, Google Workspace</li>
+        <li>Networking: TCP/IP, LAN/WAN, Troubleshooting</li>
+        <li>Programming: PHP, Laravel, MySQL, HTML/CSS</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>🏆 Achievements</h2>
       <ul>
-        <li>Cum Laude graduate in Computer Programming</li>
-        <li>Optimized POS across 100+ branches</li>
-        <li>Reduced downtime through proactive maintenance</li>
+        <li>Cum Laude | PRMSU</li>
+        <li>Optimized billing systems in 100+ branches</li>
       </ul>
+      <a class="btn-download" href="resume.pdf" download>📄 Download Resume</a>
     </div>
 
     <div class="section">
-      <h2>📞 Contact</h2>
+      <h2>📬 Contact Form</h2>
+      <!-- Replace the link below with your own Google Form link -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDUMMYLINK/viewform?embedded=true">Loading…</iframe>
+    </div>
+
+    <div class="section">
+      <h2>📞 Contact Info</h2>
       <ul>
+	<li>Mobile: +639094484370 </li>
         <li>Email: jmsdragon19@gmail.com</li>
         <li>GitHub: <a href="https://github.com/dpoia">github.com/dpoia</a></li>
         <li>LinkedIn: https://www.linkedin.com/in/jessamarie/</li>
@@ -160,7 +196,16 @@
   </div>
 
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 Jessa Marie Dragon. All rights reserved.
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+  </script>
+
 </body>
 </html>
