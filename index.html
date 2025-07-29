@@ -3,41 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jessa Marie Dragon | Portfolio</title>
+  <title>Jessa Marie Dragon| Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f7fa;
       margin: 0;
       padding: 0;
+      color: #333;
     }
+
+    header {
+      background-color: #092b4d;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
     .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
-    h1, h2 {
-      color: #092b4d;
-    }
-    ul, p {
-      line-height: 1.6;
-    }
+
     .section {
       margin-bottom: 2rem;
     }
-    .label {
-      font-weight: bold;
+
+    .section h2 {
+      color: #092b4d;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #092b4d;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .section h2 {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Jessa Marie Dragon</h1>
-    <p><strong>IT Associate | Junior Programmer  | System Specialist </strong></p>
+    <p>IT Associate | System Specialist |Junior Programmer</p>
+  </header>
 
+  <div class="container">
     <div class="section">
       <h2>🎓 Education</h2>
       <p><strong>Bachelor of Technical Vocational Teacher Education (BTVTE)</strong>, Major in Computer Programming<br/>
@@ -51,32 +111,32 @@
       <p><strong>System Specialist</strong><br/>
       Balibago Waterworks System Inc. | July 2024 – Present</p>
       <ul>
-        <li>Enhanced and maintained the POS system (Elite System) ensuring accurate billing and payment processes.</li>
-        <li>Provided IT support to 100+ branches, resolving hardware, software, and network issues.</li>
-        <li>Managed Google Workspace and company email systems for secure and efficient communication.</li>
-        <li>Implemented cybersecurity protocols and maintained server/network integrity.</li>
-        <li>Conducted user training and maintained technical documentation.</li>
+        <li>Enhanced and maintained POS system (Elite System) for accurate billing/payment.</li>
+        <li>Provided IT support to 100+ branches across the country.</li>
+        <li>Managed Google Workspace and ensured secure communication.</li>
+        <li>Implemented cybersecurity measures and server integrity protocols.</li>
+        <li>Led user training and created technical documentation.</li>
       </ul>
 
       <p><strong>Senior Technician</strong><br/>
-      Browave Philippines Corporation | September 2023 – April 2024</p>
+      Browave Philippines Corporation | Sept 2023 – Apr 2024</p>
       <ul>
-        <li>Developed and maintained CIM systems to optimize manufacturing processes.</li>
-        <li>Diagnosed and resolved complex hardware, software, and networking issues.</li>
-        <li>Ensured system security, performed upgrades, and maintained backups.</li>
-        <li>Collaborated with teams to improve technical system performance.</li>
+        <li>Developed CIM systems for efficient manufacturing workflows.</li>
+        <li>Resolved complex hardware/software/network issues.</li>
+        <li>Handled upgrades, backups, and security tasks.</li>
+        <li>Improved overall system performance and support processes.</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>🛠️ Technical Skills</h2>
       <ul>
-        <li><span class="label">System Administration:</span> Windows Server, Google Workspace</li>
-        <li><span class="label">Networking:</span> LAN/WAN, TCP/IP, Network Security</li>
-        <li><span class="label">Programming:</span> PHP, Laravel, MySQL, Basic Web Development</li>
-        <li><span class="label">Tech Support:</span> Hardware/Software Diagnostics, Remote Tools</li>
-        <li><span class="label">Cybersecurity:</span> System Integrity, Data Backup Protocols</li>
-        <li><span class="label">Documentation:</span> User Training, System Reporting</li>
+        <li><strong>System Administration:</strong> Windows Server, Google Workspace</li>
+        <li><strong>Networking:</strong> LAN/WAN, TCP/IP, Security</li>
+        <li><strong>Programming:</strong> PHP, Laravel, MySQL, Web Development</li>
+        <li><strong>Support:</strong> Diagnostics, Remote Tools</li>
+        <li><strong>Cybersecurity:</strong> Backup Protocols, Integrity Monitoring</li>
+        <li><strong>Documentation:</strong> Reports, User Training</li>
       </ul>
     </div>
 
@@ -84,8 +144,8 @@
       <h2>🏆 Achievements</h2>
       <ul>
         <li>Cum Laude graduate in Computer Programming</li>
-        <li>Optimized POS systems across 100+ branches, improving billing accuracy</li>
-        <li>Reduced system downtime via proactive upgrades and maintenance</li>
+        <li>Optimized POS across 100+ branches</li>
+        <li>Reduced downtime through proactive maintenance</li>
       </ul>
     </div>
 
@@ -98,5 +158,9 @@
       </ul>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
 </body>
 </html>
